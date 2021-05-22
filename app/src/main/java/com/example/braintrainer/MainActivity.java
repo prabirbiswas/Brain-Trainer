@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
     public void playAgain(View view){
         score = 0;
         numberOfQuestions=0;
-        timerTextView.setText("5s");
+        timerTextView.setText("15s");
         scoreTextView.setText(Integer.toString(score)+ "/"+Integer.toString(numberOfQuestions));
         newQuestion();
         playAgainButton.setVisibility(View.INVISIBLE);
 
-        new CountDownTimer(5100,1000){
+        new CountDownTimer(15100,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -59,15 +59,18 @@ public class MainActivity extends AppCompatActivity {
         goButton.setVisibility(View.INVISIBLE);
         playAgain(findViewById(R.id.timerTextView));
         gameLayout.setVisibility(View.VISIBLE);
+        resultTextView.setVisibility(View.INVISIBLE);
 
     }
 
     public void chooseAnswer(View view){
        if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())){
-           resultTextView.setText("Correct!");
+          resultTextView.setText("Correct!");
+           resultTextView.setVisibility(View.VISIBLE);
            score++;
        }else{
            resultTextView.setText("Wrong :(");
+           resultTextView.setVisibility(View.VISIBLE);
        }
        numberOfQuestions++;
        scoreTextView.setText(Integer.toString(score)+ "/"+Integer.toString(numberOfQuestions));
@@ -122,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
 
         goButton.setVisibility(View.VISIBLE);
         gameLayout.setVisibility(View.INVISIBLE);
+
+        getSupportActionBar().hide();
 
     }
 }

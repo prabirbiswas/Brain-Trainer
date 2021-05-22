@@ -29,11 +29,12 @@
 
         <Button
             android:id="@+id/playAgainButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="169dp"
+            android:layout_height="67dp"
             android:layout_marginTop="65dp"
             android:onClick="playAgain"
             android:text="Play Again"
+            android:textSize="20dp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -66,7 +67,9 @@
                 app:layout_column="0"
                 app:layout_columnWeight="1"
                 app:layout_row="0"
-                app:layout_rowWeight="1" />
+                app:layout_rowWeight="1"
+                android:textAlignment="center"
+                />
 
             <Button
                 android:id="@+id/button1"
@@ -81,7 +84,9 @@
                 app:layout_column="1"
                 app:layout_columnWeight="1"
                 app:layout_row="0"
-                app:layout_rowWeight="1" />
+                app:layout_rowWeight="1"
+                android:textAlignment="center"
+                />
 
             <Button
                 android:id="@+id/button2"
@@ -96,7 +101,9 @@
                 app:layout_column="0"
                 app:layout_columnWeight="1"
                 app:layout_row="1"
-                app:layout_rowWeight="1" />
+                app:layout_rowWeight="1"
+                android:textAlignment="center"
+                />
 
             <Button
                 android:id="@+id/button3"
@@ -110,7 +117,9 @@
                 app:layout_column="1"
                 app:layout_columnWeight="1"
                 app:layout_row="1"
-                app:layout_rowWeight="1" />
+                app:layout_rowWeight="1"
+                android:textAlignment="center"
+                />
         </androidx.gridlayout.widget.GridLayout>
 
         <TextView
